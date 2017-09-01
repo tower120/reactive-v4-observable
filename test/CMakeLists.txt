@@ -14,4 +14,5 @@ endif()
 
 include_directories(../src)
 
+set(SOURCE_FILES main.cpp ../src/Event.h ../src/Observable.h ../src/CopyableObservable.h ../src/utils/has_equal_op.h ../src/ObservableValue.h ../src/SchedulableEvent.h ../src/reentrancy.h ../src/observe.h ../src/utils/foreach_args.h)
 add_executable(reactive_v4_observable ${SOURCE_FILES})

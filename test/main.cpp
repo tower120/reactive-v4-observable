@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include <Observable.h>
+#include <CopyableObservable.h>
 #include <ObservableValue.h>
 #include <observe.h>
 
@@ -76,6 +77,7 @@ void test_Observable(){
     // copy test
     std::cout << "font1: " << font1.bytes << std::endl;
 
+    CopyableObservable<Font> font2{font1};
 
     font2.onChange.subscribe([&](){
         std::cout << "font2: " << font2.bytes << std::endl;
